@@ -8,7 +8,7 @@ import Footer from './layout/Footer/index';
 
 import Home from './pages/Home/index';
 import Login from './pages/Login/index';
-import SingUp from './pages/Signup/index';
+import SignUp from './pages/Signup/index';
 
 import * as serviceWorker from './serviceWorker';
 
@@ -22,7 +22,7 @@ ReactDOM.render(
 <Header/>
 <Route exact path='/' component={Home} />
 <Route exact path='/login' component={Login} />
-<Route exact path='/sing-up' component={SingUp} />
+<Route exact path='/sign-up' component={SignUp} />
 <Footer/>
 </div>
 </BrowserRouter>,

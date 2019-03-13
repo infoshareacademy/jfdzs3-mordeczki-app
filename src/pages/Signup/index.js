@@ -5,7 +5,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 
-class SingUp extends Component {
+class SignUp extends Component {
   constructor(props){
     super(props);
     this.state={
@@ -61,4 +61,4 @@ class SingUp extends Component {
   }
 }
 
-export default SingUp;
+export default SignUp;
