@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import './style.css';
-
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
+
+import './style.css';
 
 class Login extends Component {
 constructor(props){
@@ -11,8 +11,7 @@ constructor(props){
   this.state={
   username:'',
   password:''
-  }
-  
+  } 
  }
  
 render() {
