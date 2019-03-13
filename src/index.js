@@ -7,7 +7,7 @@ import Header from './layout/Header/index';
 import Footer from './layout/Footer/index';
 
 import Home from './pages/Home/index';
-import SingIn from './pages/SignIn/index';
+import Login from './pages/Login/index';
 import SingUp from './pages/Signup/index';
 
 import * as serviceWorker from './serviceWorker';
@@ -21,7 +21,7 @@ ReactDOM.render(
 <div>
 <Header/>
 <Route exact path='/' component={Home} />
-<Route exact path='/sing-in' component={SingIn} />
+<Route exact path='/login' component={Login} />
 <Route exact path='/sing-up' component={SingUp} />
 <Footer/>
 </div>

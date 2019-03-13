@@ -7,7 +7,7 @@ render() {
 return (
 <div>
     <Link to="sing-up"> Sing Up</Link>
-    <Link to="sing-in"> Sing In</Link>
+    <Link to="login">Login</Link>
 </div>
 );
 }
