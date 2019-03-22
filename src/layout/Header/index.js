@@ -1,16 +1,44 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom';
+
+import Toolbar from './Toolbar/index';
+import SideDrawer from './SideDrawer/index';
+import Backdrop from './Backdrop/index';
 import './style.css';
 
+
 class Header extends Component {
-render() {
-return (
-<div>
-    <Link to="sign-up"> Sign Up</Link>
-    <Link to="login">Login</Link>
-</div>
-);
-}
+    state = {
+        sideDrawerOpen: false,
+    };
+
+
+    drawerToggleClickHandler = () => {
+        this.setState((prevState) => {
+            return{sideDrawerOpen: !prevState.sideDrawerOpen};
+        });
+    };
+
+    backdropClickHandler = () => {
+        this.setState({sideDrawerOpen:false});
+    };
+
+
+    render() {
+        let backdrop;
+
+        if (this.state.sideDrawerOpen){
+            backdrop = <Backdrop click={this.backdropClickHandler}/>
+        }
+
+        return (
+            <div style={{ height: '100%' }}>
+                <Toolbar drawerClickHandler={this.drawerToggleClickHandler} />
+                <SideDrawer show={this.state.sideDrawerOpen}/>
+                {backdrop}
+
+            </div>
+        );
+    }
 }
 
 export default Header;

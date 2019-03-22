@@ -8,14 +8,23 @@ import TextField from 'material-ui/TextField';
 class SignUp extends Component {
   constructor(props){
     super(props);
-    this.state={
+    this.state= {
       first_name:'',
       last_name:'',
       type:'',
       email:'',
       password:''
     }
+
+    
   }
+
+  // zapełniam state - input wyświetlam to co jest w state
+  // binduje do profilu / formularz
+  // 
+  // validacja
+  // 
+
   render() {
     return (
       <div className='register-container'>
