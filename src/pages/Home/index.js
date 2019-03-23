@@ -1,17 +1,28 @@
 import React from "react";
 import "./style.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Icon from './icon';
+import {Form, Input, FormGroup, Container, Label} from 'reactstrap';
+import 'react-dates/initialize';
+import 'react-dates/lib/css/_datepicker.css';
+import {SingleDatePicker} from 'react-dates';
 
 class Home extends React.Component {
   constructor(props) {
     super(props);
+
+    this.userData = [
+      { name: "fryzjer", date: 666 },
+      { name: "kosmetyczka", date: 123 },
+      { name: "masaż", date: 544 }
+    ]
+
     this.state = {
-      userData: [
-        { name: "fryzjer", date: 666 },
-        { name: "kosmetyczka", date: 123 },
-        { name: "masaż", date: 544 }
-      ],
+      userData : this.userData,
       filteredData: [],
-      isFiltered: false
+      isFiltered: false,
+      date: null,
+      focused: null
     };
     this.handleKeyPress = this.handleKeyPress.bind(this);
   }
@@ -28,9 +39,6 @@ class Home extends React.Component {
   }
 
   render() {
-    console.log("Filtered:", this.state.filteredData.length);
-    console.log("Initial:", this.state.userData.length);
-    console.log("Filtered?:", this.state.isFiltered);
     let renderData = "";
     if (this.state.filteredData.length !== 0) {
       renderData = this.state.filteredData;
@@ -47,8 +55,35 @@ class Home extends React.Component {
         <input
           type="text"
           id="searchCharacters"
-          onChange={this.handleKeyPress}
-        />
+          onChange={this.handleKeyPress} />
+          <Form>
+            <FormGroup>
+            <SingleDatePicker
+                          // showClearDate={true}
+                          customInputIcon={
+                            <svg className="icon icon-small">
+                              <Icon
+                                icon="ICON_CALENDER"
+                                className="icon icon-large"
+                              />
+                            </svg>
+                          }
+                          inputIconPosition="after"
+                          small={true}
+                          block={false}
+                          numberOfMonths={1}
+                          date={this.state.date}
+                          onDateChange={date => this.handleDateChange(date)}
+                          focused={this.state.focused}
+                          onFocusChange={({ focused }) =>
+                            this.setState({ focused })
+                          }
+                          openDirection="up"
+                          hideKeyboardShortcutsPanel={true}
+                        />
+            </FormGroup>
+          </Form>
+
         <ul>
           {renderData.map(user => (
             <li key={user.name}>
@@ -62,3 +97,4 @@ class Home extends React.Component {
 }
 
 export default Home;
+ 
