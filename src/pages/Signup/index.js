@@ -24,6 +24,14 @@ class SignUp extends Component {
   // 
   // validacja
   // 
+  // select dla ser or prov.
+  // <select>
+  //   <option> User</option>
+  //   <option> Provider</option>
+  // </select>
+  //reduce
+// destruktyzacja {...a} ..prev,
+
 
   render() {
     return (
