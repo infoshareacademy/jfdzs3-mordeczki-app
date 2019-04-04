@@ -14,15 +14,19 @@ const toolbar = props =>(
                     <div className='toolbarLogo'>
                         <img src={Logo} herf='/' className='toolbarLogoItem'/>
                     </div>
+                            <div>
+                                <button className='singUpButton'>
+                                    <Link to="sign-up"> Sign Up</Link>
+                                </button>
+                            </div>
+                            <div>
+                                <button className='loginButton'>
+                                    <Link to="login">Login</Link>
+                                </button>
+                            </div>
                     <div className="spacer"/>
                     <div className='toolbarNavigationItems'>
                         <ul>
-                            <li>
-                                <a><Link to="sign-up"> Sign Up</Link></a>
-                            </li>
-                            <li>
-                                <a><Link to="login">Login</Link></a>
-                            </li>
                             <li>
                                 <a><Link to="profile_user">My Profile</Link></a>
                             </li>

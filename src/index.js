@@ -14,22 +14,21 @@ import ProfilProvider from './pages/ProfileProvider/index';
 
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(<Home />, document.getElementById('root'));
 
 serviceWorker.unregister();
 
 ReactDOM.render(
-<BrowserRouter>
-<div>
-<Header/>
-<Route exact path='/' component={Home} />
-<Route exact path='/login' component={Login} />
-<Route exact path='/sign-up' component={SignUp} />
-<Route exact path='/profile_user' component={ProfilUser} />
-<Route exact path='/profile_provider' component={ProfilProvider} />
-<Footer/>
-</div>
-</BrowserRouter>,
-document.getElementById('root')
+    <BrowserRouter>
+        <div>
+            <Header />
+            <Route exact path='/' component={Home} />
+            <Route exact path='/login' component={Login} />
+            <Route exact path='/sign-up' component={SignUp} />
+            <Route exact path='/profile_user' component={ProfilUser} />
+            <Route exact path='/profile_provider' component={ProfilProvider} />
+            <Footer />
+        </div>
+    </BrowserRouter>,
+    document.getElementById('root')
 );
 
