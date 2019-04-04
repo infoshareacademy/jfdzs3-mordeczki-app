@@ -5,17 +5,34 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import RaisedButton from 'material-ui/RaisedButton';
 import TextField from 'material-ui/TextField';
 
-class SingUp extends Component {
+class SignUp extends Component {
   constructor(props){
     super(props);
-    this.state={
+    this.state= {
       first_name:'',
       last_name:'',
       type:'',
       email:'',
       password:''
     }
+
+    
   }
+
+  // zapełniam state - input wyświetlam to co jest w state
+  // binduje do profilu / formularz
+  // 
+  // validacja
+  // 
+  // select dla ser or prov.
+  // <select>
+  //   <option> User</option>
+  //   <option> Provider</option>
+  // </select>
+  //reduce
+// destruktyzacja {...a} ..prev,
+
+
   render() {
     return (
       <div className='register-container'>
@@ -61,4 +78,4 @@ class SingUp extends Component {
   }
 }
 
-export default SingUp;
+export default SignUp;
