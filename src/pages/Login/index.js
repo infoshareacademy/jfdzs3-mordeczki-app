@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import fire from '../../config/fire';
-import UserIcon from '../../image/user.png'
+import UserIcon from '../../image/user.png';
+import LoginIcon from '../../image/people_icon.png';
+import PasswordIcon from '../../image/lock.png'
 
 
 import './style.css';
@@ -34,12 +36,12 @@ class Login extends Component {
    }
   
    */
-   handleChange = (e) => {
-     this.setState({
-       [e.target.id]: e.target.value
-     })
-   }
-   handleSubmit = (e) => {
+  handleChange = (e) => {
+    this.setState({
+      [e.target.id]: e.target.value
+    })
+  }
+  handleSubmit = (e) => {
     e.preventDefault();
     console.log(this.state)
   }
@@ -49,18 +51,44 @@ class Login extends Component {
       <div className="loginContainer">
         <form onSubmit={this.handleSubmit} className="formContainer">
           <img src={UserIcon} className="userIcon" />
-          <div className="formLogin">
-            <label htmlFor="email">EMAIL</label>
-            <input onChange={this.handleChange} type="email" name="email" className="formControl" id="email"placeholder="Twój email" />
+
+          <div className="inputContainer">
+            <div className="inputContainerItems ">
+              <input onChange={this.handleChange} type="email" name="email" className="inputItems"
+                id="email" placeholder="Twój email" />
+              <button type="submit" className="formControlButton">
+                <img src={LoginIcon} className="formControlIcon" />
+              </button>
+            </div>
           </div>
-          <div className="formLogin">
-            <label htmlFor="password">HASŁO</label>
-            <input onChange={this.handleChange} type="password" name="password" className="formControl" id="password" placeholder="Twóje hasło" />
+
+          <div className="inputContainer">
+            <div className="inputContainerItems ">
+              <input onChange={this.handleChange} type="password" name="password" className="inputItems"
+                id="password" placeholder="Twoje hasło" />
+              <button type="submit" className="formControlButton">
+                <img src={PasswordIcon} className="formControlIcon" />
+              </button>
+            </div>
           </div>
-          <button type="submit" onClick={this.login} className="loginButton">ZALOGUJ </button>
-          <div>
-            <button onClick={this.singup} className="singUpButton"><h1>ZAREJESTRUJ SIĘ</h1>USŁUGOBIORCA  </button>
-            <button onClick={this.singup} className="singUpButton"><h1>ZAREJESTRUJ SIĘ</h1>USŁUGODAWCA   </button>
+
+         
+          
+          <button
+            type="submit" onClick={this.login} className="loginFormButton">ZALOGUJ
+          </button>
+
+
+
+          <div className="loginFormButton">
+            <button
+              onClick={this.singup} className="loginButton">
+              <h1>ZAREJESTRUJ SIĘ</h1>USŁUGOBIORCA
+            </button>
+            <button
+              onClick={this.singup} className="loginButton">
+              <h1>ZAREJESTRUJ SIĘ</h1>USŁUGODAWCA
+            </button>
           </div>
         </form>
       </div>
