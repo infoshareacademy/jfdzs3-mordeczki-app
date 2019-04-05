@@ -13,6 +13,9 @@
 
 
 import React, { Component } from 'react'
+import UserIcon from '../../image/user.png';
+import LoginIcon from '../../image/people_icon.png';
+import PasswordIcon from '../../image/lock.png'
 
 class SignUp extends Component {
   state = {
@@ -32,30 +35,61 @@ class SignUp extends Component {
   }
   render() {
     return (
-      <div className="container">
-        <form className="white" onSubmit={this.handleSubmit}>
-          <h5 className="grey-text text-darken-3">ZAREJESTRUJ SIĘ</h5>
-          <div className="input-field">
-            <label htmlFor="email">EMAIL</label>
-            <input type="email" id='email' onChange={this.handleChange} />
-          </div>
-          <div className="input-field">
-            <label htmlFor="password">HASŁO</label>
-            <input type="password" id='password' onChange={this.handleChange} />
-          </div>
-          <div className="input-field">
-            <label htmlFor="firstName">IMIĘ</label>
-            <input type="text" id='firstName' onChange={this.handleChange} />
-          </div>
-          <div className="input-field">
-            <label htmlFor="lastName">NAZWISKO</label>
-            <input type="text" id='lastName' onChange={this.handleChange} />
-          </div>
-          <div className="input-field">
-            <button className="btn pink lighten-1 z-depth-0">ZAREJESTRUJ SIĘ</button>
-          </div>
-        </form>
+      <div>
+        <div className="loginContainer">
+
+          <form onSubmit={this.handleSubmit} className="formContainer">
+            <img src={UserIcon} className="userIcon" />
+
+            <div className="inputContainerItems ">
+              <input onChange={this.handleChange} type="email" name="email" className="inputItems"
+                id="email" placeholder="Twój email" />
+              <button type="submit" className="formControlButton">
+                <img src={LoginIcon} className="formControlIcon" />
+              </button>
+            </div>
+            <div className="loginSpacer" />
+
+            <div className="inputContainerItems ">
+              <input onChange={this.handleChange} type="email" name="email" className="inputItems"
+                id="email" placeholder="Twój email" />
+              <button type="submit" className="formControlButton">
+                <img src={LoginIcon} className="formControlIcon" />
+              </button>
+            </div>
+
+            <div className="loginSpacer" />
+
+            <div className="inputContainerItems ">
+              <input onChange={this.handleChange} type="password" name="password" className="inputItems"
+                id="password" placeholder="Twoje hasło" />
+              <button type="submit" className="formControlButton">
+                <img src={PasswordIcon} className="formControlIcon" />
+              </button>
+            </div>
+           
+            
+            <div className="loginSpacer" />
+            <div className="inputContainerItems ">
+              <input onChange={this.handleChange} type="email" name="email" className="inputItems"
+                id="email" placeholder="Twój email" />
+              <button type="submit" className="formControlButton">
+                <img src={LoginIcon} className="formControlIcon" />
+              </button>
+            </div>
+            <div className="loginSpacer" />
+
+            <div className="loginButtonContainer">
+              <button
+                onClick={this.singup} className="loginFormButton" herf='/sign-up'>
+                ZAREJESTRUJ SIĘ
+              </button>
+            </div>
+          </form>
+        </div>
+
       </div>
+
     )
   }
 }

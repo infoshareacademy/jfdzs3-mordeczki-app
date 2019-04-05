@@ -51,43 +51,30 @@ class Login extends Component {
       <div className="loginContainer">
         <form onSubmit={this.handleSubmit} className="formContainer">
           <img src={UserIcon} className="userIcon" />
-
-          <div className="inputContainer">
-            <div className="inputContainerItems ">
-              <input onChange={this.handleChange} type="email" name="email" className="inputItems"
-                id="email" placeholder="Twój email" />
-              <button type="submit" className="formControlButton">
-                <img src={LoginIcon} className="formControlIcon" />
-              </button>
-            </div>
+          <div className="inputContainerItems ">
+            <input onChange={this.handleChange} type="email" name="email" className="inputItems"
+              id="email" placeholder="Twój email" />
+            <button type="submit" className="formControlButton">
+              <img src={LoginIcon} className="formControlIcon" />
+            </button>
           </div>
+          <div className="loginSpacer" />
 
-          <div className="inputContainer">
-            <div className="inputContainerItems ">
-              <input onChange={this.handleChange} type="password" name="password" className="inputItems"
-                id="password" placeholder="Twoje hasło" />
-              <button type="submit" className="formControlButton">
-                <img src={PasswordIcon} className="formControlIcon" />
-              </button>
-            </div>
+
+          <div className="inputContainerItems ">
+            <input onChange={this.handleChange} type="password" name="password" className="inputItems"
+              id="password" placeholder="Twoje hasło" />
+            <button type="submit" className="formControlButton">
+              <img src={PasswordIcon} className="formControlIcon" />
+            </button>
           </div>
-
-         
-          
-          <button
-            type="submit" onClick={this.login} className="loginFormButton">ZALOGUJ
-          </button>
-
-
-
-          <div className="loginFormButton">
+          <div className="loginButtonContainer">
             <button
-              onClick={this.singup} className="loginButton">
-              <h1>ZAREJESTRUJ SIĘ</h1>USŁUGOBIORCA
+              type="submit" onClick={this.login} className="loginFormButton">ZALOGUJ SIĘ
             </button>
             <button
-              onClick={this.singup} className="loginButton">
-              <h1>ZAREJESTRUJ SIĘ</h1>USŁUGODAWCA
+              onClick={this.singup} className="loginFormButton" herf='/sign-up'>
+              ZAREJESTRUJ SIĘ
             </button>
           </div>
         </form>
