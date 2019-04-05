@@ -7,7 +7,7 @@ const SignedOutLinks = () => {
         <ul className="right">
             <li>
                 <button className='loginButton'>
-                    <NavLink to='/'>ZALOGUJ SIĘ</NavLink>
+                    <NavLink to='/login'>ZALOGUJ SIĘ</NavLink>
                 </button>
             </li>
             <li>

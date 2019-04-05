@@ -33,9 +33,6 @@ class Login extends Component {
      })
    }
   
-   handleChange(e) {
-     this.setState({[e.target.name]: e.target.value});
-   }
    */
    handleChange = (e) => {
      this.setState({
@@ -47,11 +44,10 @@ class Login extends Component {
     console.log(this.state)
   }
 
-
   render() {
     return (
       <div className="loginContainer">
-        <form onSubmit={this.handleSubmit} className="loginItems">
+        <form onSubmit={this.handleSubmit} className="formContainer">
           <img src={UserIcon} className="userIcon" />
           <div className="formLogin">
             <label htmlFor="email">EMAIL</label>

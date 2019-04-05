@@ -1,7 +1,12 @@
 .footer {
-    background: black;
     width: 100%;
-    height: 40px;
+    height:50px;
+    background: black;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+ 
+ 
 
 }
 .footerIconItems{
@@ -11,6 +16,7 @@
 }
 .iconItem{
     height: 40px;
+    margin-top: 6px;
     margin-left: 14px;
     margin-right: 14px;
 }
