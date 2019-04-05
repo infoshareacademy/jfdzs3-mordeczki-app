@@ -1,5 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import SignedInLink from '../SignedInLinks/index';
+import SignedOutLink from '../SignedOutLinks/index';
+
 import './style.css';
 
 const sideDrawer = props => {
@@ -11,16 +14,19 @@ const sideDrawer = props => {
     <nav className={drawerClasses}>
         <ul>
             <li>
-                <a><Link to="sign-up"> Sign Up</Link></a>
+                <a><Link to="profile_user">Mój Profil</Link></a>
             </li>
             <li>
-                <a><Link to="login">Login</Link></a>
+                <a><Link to="profile_provider">Profil Usługodawcy</Link></a>
             </li>
             <li>
-                <a><Link to="profile_user">My Profile</Link></a>
+                <a><Link to="login">Logowanie</Link></a>
             </li>
             <li>
-                <a><Link to="profile_provider">Profile</Link></a>
+                <a><Link to="sign-up"> Zarejestruj się</Link></a>
+            </li>
+            <li>
+                <a><Link to="profile_provider">Wyloguj Mnie</Link></a>
             </li>
         </ul>
     </nav>

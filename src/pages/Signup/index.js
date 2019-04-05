@@ -1,81 +1,63 @@
-import React, { Component } from 'react';
-import './style.css';
-
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import RaisedButton from 'material-ui/RaisedButton';
-import TextField from 'material-ui/TextField';
-
-class SignUp extends Component {
-  constructor(props){
-    super(props);
-    this.state= {
-      first_name:'',
-      last_name:'',
-      type:'',
-      email:'',
-      password:''
-    }
-
-    
-  }
-
-  // zapełniam state - input wyświetlam to co jest w state
-  // binduje do profilu / formularz
-  // 
-  // validacja
-  // 
-  // select dla ser or prov.
-  // <select>
-  //   <option> User</option>
-  //   <option> Provider</option>
-  // </select>
-  //reduce
+// zapełniam state - input wyświetlam to co jest w state
+// binduje do profilu / formularz
+// 
+// validacja
+// 
+// select dla ser or prov.
+// <select>
+//   <option> User</option>
+//   <option> Provider</option>
+// </select>
+//reduce
 // destruktyzacja {...a} ..prev,
 
 
+import React, { Component } from 'react'
+
+class SignUp extends Component {
+  state = {
+    email: '',
+    password: '',
+    firstName: '',
+    lastName: '',
+  }
+  handleChange = (e) => {
+    this.setState({
+      [e.target.id]: e.target.value
+    })
+  }
+  handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(this.state);
+  }
   render() {
     return (
-      <div className='register-container'>
-        <MuiThemeProvider>
-          <div>
-           <TextField
-             hintText="Enter your First Name"
-             floatingLabelText="First Name"
-             onChange = {(event,newValue) => this.setState({first_name:newValue})}
-             />
-           <br/>
-           <TextField
-             hintText="Enter your Last Name"
-             floatingLabelText="Last Name"
-             onChange = {(event,newValue) => this.setState({last_name:newValue})}
-             />
-           <br/>
-           <TextField
-             hintText="Enter your Type"
-             floatingLabelText="User or Provider ?"
-             onChange = {(event,newValue) => this.setState({type:newValue})}
-             />
-           <br/>
-           <TextField
-             hintText="Enter your Email"
-             type="email"
-             floatingLabelText="Email"
-             onChange = {(event,newValue) => this.setState({email:newValue})}
-             />
-           <br/>
-           <TextField
-             type = "password"
-             hintText="Enter your Password"
-             floatingLabelText="Password"
-             onChange = {(event,newValue) => this.setState({password:newValue})}
-             />
-           <br/>
-           <RaisedButton label="Submit" primary={true} className='submit-button' onClick={(event) => this.handleClick(event)}/>
+      <div className="container">
+        <form className="white" onSubmit={this.handleSubmit}>
+          <h5 className="grey-text text-darken-3">ZAREJESTRUJ SIĘ</h5>
+          <div className="input-field">
+            <label htmlFor="email">EMAIL</label>
+            <input type="email" id='email' onChange={this.handleChange} />
           </div>
-         </MuiThemeProvider>
+          <div className="input-field">
+            <label htmlFor="password">HASŁO</label>
+            <input type="password" id='password' onChange={this.handleChange} />
+          </div>
+          <div className="input-field">
+            <label htmlFor="firstName">IMIĘ</label>
+            <input type="text" id='firstName' onChange={this.handleChange} />
+          </div>
+          <div className="input-field">
+            <label htmlFor="lastName">NAZWISKO</label>
+            <input type="text" id='lastName' onChange={this.handleChange} />
+          </div>
+          <div className="input-field">
+            <button className="btn pink lighten-1 z-depth-0">ZAREJESTRUJ SIĘ</button>
+          </div>
+        </form>
       </div>
-    );
+    )
   }
 }
 
-export default SignUp;
+export default SignUp

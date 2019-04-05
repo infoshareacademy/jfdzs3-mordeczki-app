@@ -4,3 +4,13 @@
     height: 40px;
 
 }
+.footerIconItems{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.iconItem{
+    height: 40px;
+    margin-left: 14px;
+    margin-right: 14px;
+}

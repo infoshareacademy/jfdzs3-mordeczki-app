@@ -72,6 +72,17 @@
 .toolbarNavigationItems a {
     color: white;
     text-decoration: none;
+    font-size: 10px;
+}
+.providerIconToolbar{
+    height: 20px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+.userIconToolbar{
+    height: 12px;
+    cursor: pointer;
+    margin-left: 5px;
 }
 
 .toolbarNavigationItems a:hover,
