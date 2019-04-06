@@ -3,6 +3,9 @@
   flex-direction: row;
   justify-content: center;
   margin-top: 100px;
+  margin-block-end: 100px;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 .userIcon {
   height: 100px;
@@ -35,7 +38,7 @@
 }
 .formControlButton {
   position: absolute;
-  right: 200px;
+  /*right: 220px; */
   width: 60px;
   height: 36px;
   border: 2px solid white;
@@ -65,8 +68,15 @@
   width: 100%;
   text-decoration: none;
   margin-top: 15px;
- 
+
 }
+
+.signUpButtonContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .loginFormButton:hover {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #ef027d), color-stop(1, #ff5bb0));
   background: -moz-linear-gradient(top, #ef027d 5%, #ff5bb0 100%);

@@ -52,30 +52,37 @@ class Login extends Component {
         <form onSubmit={this.handleSubmit} className="formContainer">
           <img src={UserIcon} className="userIcon" />
           <div className="inputContainerItems ">
-            <input onChange={this.handleChange} type="email" name="email" className="inputItems"
-              id="email" placeholder="Twój email" />
             <button type="submit" className="formControlButton">
               <img src={LoginIcon} className="formControlIcon" />
             </button>
+            <input onChange={this.handleChange} type="email" name="email" className="inputItems"
+              id="email" placeholder="Twój email" />
           </div>
           <div className="loginSpacer" />
 
 
           <div className="inputContainerItems ">
-            <input onChange={this.handleChange} type="password" name="password" className="inputItems"
-              id="password" placeholder="Twoje hasło" />
             <button type="submit" className="formControlButton">
               <img src={PasswordIcon} className="formControlIcon" />
             </button>
+            <input onChange={this.handleChange} type="password" name="password" className="inputItems"
+              id="password" placeholder="Twoje hasło" />
           </div>
           <div className="loginButtonContainer">
             <button
               type="submit" onClick={this.login} className="loginFormButton">ZALOGUJ SIĘ
             </button>
+            <div className="signUpButtonContainer">
             <button
               onClick={this.singup} className="loginFormButton" herf='/sign-up'>
-              ZAREJESTRUJ SIĘ
+              ZAREJESTRUJ SIĘ - UŻYTKOWNIK
             </button>
+            <button
+              onClick={this.singup} className="loginFormButton" herf='/sign-up'>
+              ZAREJESTRUJ SIĘ - FIRMA
+            </button>
+
+            </div>
           </div>
         </form>
       </div>
