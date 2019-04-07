@@ -23,10 +23,10 @@ const sideDrawer = props => {
                 <a><Link to="login">Logowanie</Link></a>
             </li>
             <li>
-                <a><Link to="sign-up"> Zarejestruj się</Link></a>
+                <a><Link to="login"> Rejestracja</Link></a>
             </li>
             <li>
-                <a><Link to="profile_provider">Wyloguj Mnie</Link></a>
+                <a><Link to="/">Wyloguj Mnie</Link></a>
             </li>
         </ul>
     </nav>

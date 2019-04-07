@@ -82,7 +82,6 @@ class Login extends Component {
               onClick={this.singup} className="loginFormButton" herf='/sign-up'>
               ZAREJESTRUJ SIĘ <br/> FIRMA
             </button>
-
             </div>
           </div>
         </form>
