@@ -49,6 +49,7 @@
     z-index: 9999;
     margin-bottom: -200px;
     font-size: 28px;
+    font-weight: lighter;
   }
   
   .profilUserAvatarSquare {
@@ -64,6 +65,7 @@
     text-align: center;
     color: #ffffff;
     font-size: 51px;
+    font-weight: lighter;
   }
   
   .visits {
@@ -112,5 +114,5 @@
 
   .removeArea p {
     text-align: center;
-    line-height: 8px;
+    line-height: 6px;
   }
