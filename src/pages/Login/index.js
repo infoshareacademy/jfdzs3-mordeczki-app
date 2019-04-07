@@ -4,6 +4,7 @@ import fire from '../../config/fire';
 import UserIcon from '../../image/user.png';
 import LoginIcon from '../../image/people_icon.png';
 import PasswordIcon from '../../image/lock.png'
+import EmailIcon from '../../image/email.png';
 
 
 import './style.css';
@@ -53,7 +54,7 @@ class Login extends Component {
           <img src={UserIcon} className="userIcon" />
           <div className="inputContainerItems ">
             <button type="submit" className="formControlButton">
-              <img src={LoginIcon} className="formControlIcon" />
+              <img src={EmailIcon} className="formControlIcon" />
             </button>
             <input onChange={this.handleChange} type="email" name="email" className="inputItems"
               id="email" placeholder="Twój email" />
@@ -75,11 +76,11 @@ class Login extends Component {
             <div className="signUpButtonContainer">
             <button
               onClick={this.singup} className="loginFormButton" herf='/sign-up'>
-              ZAREJESTRUJ SIĘ - UŻYTKOWNIK
+              ZAREJESTRUJ SIĘ <br/> UŻYTKOWNIK
             </button>
             <button
               onClick={this.singup} className="loginFormButton" herf='/sign-up'>
-              ZAREJESTRUJ SIĘ - FIRMA
+              ZAREJESTRUJ SIĘ <br/> FIRMA
             </button>
 
             </div>

@@ -17,7 +17,7 @@ const sideDrawer = props => {
                 <a><Link to="profile_user">Mój Profil</Link></a>
             </li>
             <li>
-                <a><Link to="profile_provider">Profil Usługodawcy</Link></a>
+                <a><Link to="profile_provider">Profil Firmy</Link></a>
             </li>
             <li>
                 <a><Link to="login">Logowanie</Link></a>

@@ -29,7 +29,7 @@ const toolbar = props => (
             <div className='toolbarNavigationItems'>
                 <ul>
                     <li>
-                        {/*<a><Link to="profile_provider">PROFIL USŁUGODAWCY</Link></a>*/}
+                        <a><Link to="profile_provider">PROFIL FIRMA</Link></a>
                         <img src={ProviderIcon} herf='/profile_provider' className="providerIconToolbar"/>
                     </li>
                     <li>
