@@ -60,8 +60,6 @@ class Login extends Component {
               id="email" placeholder="Twój email" />
           </div>
           <div className="loginSpacer" />
-
-
           <div className="inputContainerItems ">
             <button type="submit" className="formControlButton">
               <img src={PasswordIcon} className="formControlIcon" />
@@ -74,13 +72,13 @@ class Login extends Component {
               type="submit" onClick={this.login} className="loginFormButton">ZALOGUJ SIĘ
             </button>
             <div className="signUpButtonContainer">
-            <button
-              onClick={this.singup} className="loginFormButton" herf='/sign-up'>
-              ZAREJESTRUJ SIĘ <br/> UŻYTKOWNIK
+              <button
+                onClick={this.singup} className="loginFormButton">
+                ZAREJESTRUJ SIĘ <br /> UŻYTKOWNIK
             </button>
-            <button
-              onClick={this.singup} className="loginFormButton" herf='/sign-up'>
-              ZAREJESTRUJ SIĘ <br/> FIRMA
+              <button
+                onClick={this.singup} className="loginFormButton" herf='/sign-up'>
+                ZAREJESTRUJ SIĘ <br /> FIRMA
             </button>
             </div>
           </div>

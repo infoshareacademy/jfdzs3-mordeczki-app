@@ -17,7 +17,9 @@ const toolbar = props => (
                 <DrawerToggleButton click={props.drawerClickHandler} />
             </div>
             <div className='toolbarLogo'>
-                <img src={Logo} herf='/' className='toolbarLogoItem' />
+                <Link to="/">
+                    <img src={Logo} className='toolbarLogoItem' />
+                </Link>
             </div>
             <div className='toolbarNavigationItems'>
                 <ul>
@@ -28,11 +30,11 @@ const toolbar = props => (
             <div className="spacer" />
             <div className='toolbarNavigationItems'>
                 <ul>
-                    <li>
-                        <a><Link to="profile_provider">PROFIL FIRMA</Link></a>
+                    <li style={{display: "flex", alignItems: "center"}}>
+                        <Link to="profile_provider">PROFIL FIRMA</Link>
                         <img src={ProviderIcon} herf='/profile_provider' className="providerIconToolbar"/>
                     </li>
-                    <li>
+                    <li style={{display: "flex", alignItems: "center"}}>
                         <a><Link to="profile_user">MÓJ PROFIL</Link></a>
                         <img src={UserLogo} herf='/profile_user' className="userIconToolbar"/>
                     </li>

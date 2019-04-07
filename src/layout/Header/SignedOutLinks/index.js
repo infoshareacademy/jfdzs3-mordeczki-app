@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './style.css';
 
 const SignedOutLinks = () => {
@@ -7,7 +7,7 @@ const SignedOutLinks = () => {
         <ul className="right">
             <li>
                 <button className='loginButton'>
-                    <NavLink to='/login'>LOGOWANIE / REJESTRACJA</NavLink>
+                    <Link to='/login'>LOGOWANIE / REJESTRACJA</Link>
                 </button>
             </li>
         </ul>
