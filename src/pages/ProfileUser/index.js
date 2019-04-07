@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import UserIcon from '../../image/user.png';
+import CalendardIcon from '../../image/calendar.png';
 import './profileUserStyles.css';
 
 class profileUser extends Component {
@@ -10,7 +10,6 @@ class profileUser extends Component {
               <div className="profileUserMenu">
                 <p>Witaj: Login</p>
                 <p>EDYTUJ</p>
-                <p>WYLOGUJ</p>
               </div>
               <div className="profilUserAvatar">
                 <p>AVATAR</p>
@@ -21,6 +20,16 @@ class profileUser extends Component {
               </div>
               <div className="visits">
               <p>Moje wizyty</p>
+              </div>
+              <div className="myVisitsContainer">
+                <div className="myVisits">
+                  <div className="iconArea">
+                    <img src={CalendardIcon}/>
+                  </div>
+                  <div className="removeArea">
+                    <p>ODWOŁAJ</p>
+                  </div>
+                </div>
               </div>
             </div>
           );
