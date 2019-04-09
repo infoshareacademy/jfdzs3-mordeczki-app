@@ -7,11 +7,9 @@ class ProfileProvider extends Component {
     return (
         
       <div className="ProfileProvider">
-        <Fragment >
             <Header />
-
+                
             <Footer />
-        </Fragment>
       </div>
     );
   }
