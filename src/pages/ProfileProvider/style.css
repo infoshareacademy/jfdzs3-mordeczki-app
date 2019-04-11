@@ -1,0 +1,45 @@
+div {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoBox {
+    width:200px;
+    height:200px;
+    padding: 0px;
+    margin-bottom:20px;
+}
+.logoBox img {
+    width:400px;
+}
+.infoBox {
+    width:600px;
+    height:200px;
+    margin-bottom:20px;
+}
+.infoBox p {
+    color:white;
+    text-align: center;
+    width:500px;
+}
+
+.nameBox {
+    width:250px;
+    height:100px;
+    margin-bottom:20px;
+    margin-left:100px;
+}
+.nameBox p{
+    color:white;
+    font-size: 20px;
+}
+.contactBox {
+    width:600px;
+    height:100px;
+}
+.editButton {
+    width:70px;
+    height:40px;
+    margin:50px;
+}
