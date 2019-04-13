@@ -25,14 +25,14 @@ class Home extends React.Component {
 
   handleInputChange = e => {
     this.setState({
-      query: e.target.value
+      query: e.target.value.toString().toLowerCase()
     });
   };
 
   render() {
     const filteredData = userData.filter(
       user =>
-        user.name.includes(this.state.query) &&
+        user.name.includes(this.state.query).toString().toLowerCase() &&
         user.dateFrom <= this.state.date.format("L").toString() &&
         user.dateTo >= this.state.date.format("L").toString() 
         
