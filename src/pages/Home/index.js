@@ -7,12 +7,12 @@ import "react-dates/lib/css/_datepicker.css";
 import "./style.css";
 
 const userData = [
-  { name: "Fryzjer Jacek", date: "04/12/2019" },
-  { name: "Fryzjer Jan", date: "04/12/2019" },
-  { name: "Kosmetyczka Andżela", date: "04/12/2019" },
-  { name: "Kosmetyczka Daria", date: "04/15/2019" },
-  { name: "Masażystka Nicola", date: "04/16/2019" },
-  { name: "Masażystka Samanta", date: "04/12/2019" }
+  { name: "Fryzjer Jacek", dateFrom: "04/10/2019", dateTo: "05/13/2019" },
+  { name: "Fryzjer Jan", dateFrom: "04/10/2019", dateTo: "05/13/2019" },
+  { name: "Kosmetyczka Andżela", dateFrom: "04/10/2019", dateTo: "05/13/2019" },
+  { name: "Kosmetyczka Daria", dateFrom: "04/10/2019", dateTo: "05/13/2019" },
+  { name: "Masażystka Nicola", dateFrom: "04/10/2019", dateTo: "05/13/2019" },
+  { name: "Masażystka Samanta", dateFrom: "04/10/2019", dateTo: "05/13/2019" }
 ];
 
 class Home extends React.Component {
@@ -33,7 +33,9 @@ class Home extends React.Component {
     const filteredData = userData.filter(
       user =>
         user.name.includes(this.state.query) &&
-        user.date.includes(this.state.date.format("L").toString())
+        user.dateFrom <= this.state.date.format("L").toString() &&
+        user.dateTo >= this.state.date.format("L").toString() 
+        
     );
 
     console.log(this.state.date.format("L").toString());
@@ -86,7 +88,7 @@ class Home extends React.Component {
                 <img src={CalendardIcon} />
               </div>
               <div className="actionArea">Zarezerwuj</div>
-              <p><strong>{user.name}</strong> <span>(Dostępność: {user.date})</span></p>
+              <p><strong>{user.name}</strong> <span>(Dostępność: {user.dateFrom}-{user.dateTo})</span></p>
             </div>
           ))}
         </div>
