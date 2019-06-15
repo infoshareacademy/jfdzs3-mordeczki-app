@@ -1,11 +1,28 @@
 import React from "react";
 import "react-dates/initialize";
 import moment from "moment";
+import * as firebase from "firebase/app";
+import "firebase/database";
 import { SingleDatePicker } from "react-dates";
 import { Link } from 'react-router-dom';
 import CalendardIcon from "../../image/calendar.png";
 import "react-dates/lib/css/_datepicker.css";
 import "./style.css";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyB22ykC5k1kNsd7ZR_YdeezXG4CNNXL2iE",
+  authDomain: "bjuty-app.firebaseapp.com",
+  databaseURL: "https://bjuty-app.firebaseio.com",
+  projectId: "bjuty-app",
+  storageBucket: "bjuty-app.appspot.com",
+  messagingSenderId: "387057660886",
+  appId: "1:387057660886:web:d4c71b5e4aa66c85"
+};
+// Initialize Firebase
+
+if (!firebase.apps.length) {
+  firebase.initializeApp(firebaseConfig);
+}
 
 const userData = [
   { id: "2", name: "Fryzjer Jacek", dateFrom: "06/10/2019", dateTo: "06/20/2019" },
