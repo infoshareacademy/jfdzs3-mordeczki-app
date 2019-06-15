@@ -25,7 +25,7 @@ ReactDOM.render(
             <Route exact path='/login' component={Login} />
             <Route exact path='/sign-up' component={SignUp} />
             <Route exact path='/profile_user' component={ProfilUser} />
-            <Route exact path='/profile_provider' component={ProfilProvider} />
+            <Route exact path='/profile_provider/:id' component={ProfilProvider} />
             <Footer />
         </div>
     </BrowserRouter>,

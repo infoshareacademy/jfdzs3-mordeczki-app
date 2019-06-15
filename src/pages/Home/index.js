@@ -2,17 +2,18 @@ import React from "react";
 import "react-dates/initialize";
 import moment from "moment";
 import { SingleDatePicker } from "react-dates";
+import { Link } from 'react-router-dom';
 import CalendardIcon from "../../image/calendar.png";
 import "react-dates/lib/css/_datepicker.css";
 import "./style.css";
 
 const userData = [
-  { name: "Fryzjer Jacek", dateFrom: "04/10/2019", dateTo: "05/13/2019" },
-  { name: "Fryzjer Jan", dateFrom: "04/10/2019", dateTo: "05/13/2019" },
-  { name: "Kosmetyczka Andżela", dateFrom: "04/10/2019", dateTo: "05/13/2019" },
-  { name: "Kosmetyczka Daria", dateFrom: "04/10/2019", dateTo: "05/13/2019" },
-  { name: "Masażystka Nicola", dateFrom: "04/10/2019", dateTo: "05/13/2019" },
-  { name: "Masażystka Samanta", dateFrom: "04/10/2019", dateTo: "05/13/2019" }
+  { id: "2", name: "Fryzjer Jacek", dateFrom: "06/10/2019", dateTo: "06/20/2019" },
+  { id: "3", name: "Fryzjer Jan", dateFrom: "06/10/2019", dateTo: "06/20/2019" },
+  { id: "4", name: "Kosmetyczka Andżela", dateFrom: "06/10/2019", dateTo: "06/20/2019" },
+  { id: "5", name: "Kosmetyczka Daria", dateFrom: "06/10/2019", dateTo: "06/20/2019" },
+  { id: "6", name: "Masażystka Nicola", dateFrom: "06/10/2019", dateTo: "06/20/2019" },
+  { id: "7", name: "Masażystka Samanta", dateFrom: "06/10/2019", dateTo: "06/20/2019" }
 ];
 
 class Home extends React.Component {
@@ -87,7 +88,7 @@ class Home extends React.Component {
               <div className="iconArea">
                 <img src={CalendardIcon} />
               </div>
-              <div className="actionArea">Zarezerwuj</div>
+              <Link className="actionArea" to={`/profile_provider/${user.id}/`}>Szczegóły</Link>
               <p><strong>{user.name}</strong> <span>(Dostępność: {user.dateFrom}-{user.dateTo})</span></p>
             </div>
           ))}
