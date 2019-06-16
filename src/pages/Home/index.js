@@ -4,7 +4,7 @@ import moment from "moment";
 import * as firebase from "firebase/app";
 import "firebase/database";
 import { SingleDatePicker } from "react-dates";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 import CalendardIcon from "../../image/calendar.png";
 import "react-dates/lib/css/_datepicker.css";
 import "./style.css";
@@ -25,12 +25,36 @@ if (!firebase.apps.length) {
 }
 
 const userData = [
-  { id: "2", name: "Fryzjer Jacek", dateFrom: "06/10/2019", dateTo: "06/20/2019" },
-  { id: "3", name: "Fryzjer Jan", dateFrom: "06/10/2019", dateTo: "06/20/2019" },
-  { id: "4", name: "Kosmetyczka Andżela", dateFrom: "06/10/2019", dateTo: "06/20/2019" },
-  { id: "5", name: "Kosmetyczka Daria", dateFrom: "06/10/2019", dateTo: "06/20/2019" },
-  { id: "6", name: "Masażystka Nicola", dateFrom: "06/10/2019", dateTo: "06/20/2019" },
-  { id: "7", name: "Masażystka Samanta", dateFrom: "06/10/2019", dateTo: "06/20/2019" }
+  {
+    id: "2",
+    name: "Fryzjer Jacek",
+    dateFrom: "06/10/2019",
+    dateTo: "06/20/2019"
+  },
+  {
+    id: "3",
+    name: "Fryzjer Jan",
+    dateFrom: "06/10/2019",
+    dateTo: "06/20/2019"
+  },
+  {
+    id: "4",
+    name: "Kosmetyczka Andżela",
+    dateFrom: "06/10/2019",
+    dateTo: "06/20/2019"
+  },
+  {
+    id: "5",
+    name: "Kosmetyczka Daria",
+    dateFrom: "06/10/2019",
+    dateTo: "06/20/2019"
+  },
+  {
+    id: "6",
+    name: "Masażystka Nicola",
+    dateFrom: "06/10/2019",
+    dateTo: "06/20/2019"
+  }
 ];
 
 class Home extends React.Component {
@@ -48,16 +72,16 @@ class Home extends React.Component {
   };
 
   render() {
-    const filteredData = userData.filter(
-      user =>
-        user.name.includes(this.state.query).toString().toLowerCase() &&
-        user.dateFrom <= this.state.date.format("L").toString() &&
-        user.dateTo >= this.state.date.format("L").toString() 
-        
+     const filteredData = userData.filter(
+      (user) => user.name.toLowerCase().includes(this.state.query)
+      && user.dateFrom <= this.state.date.format("L").toString()
+      && user.dateTo >= this.state.date.format("L").toString()
     );
 
+
+    console.log('render filderData', filteredData);
+
     console.log(this.state.date.format("L").toString());
-    console.log(userData[0].date);
 
     return (
       <div className="HomeContainer">
@@ -105,8 +129,15 @@ class Home extends React.Component {
               <div className="iconArea">
                 <img src={CalendardIcon} />
               </div>
-              <Link className="actionArea" to={`/profile_provider/${user.id}/`}>Szczegóły</Link>
-              <p><strong>{user.name}</strong> <span>(Dostępność: {user.dateFrom}-{user.dateTo})</span></p>
+              <Link className="actionArea" to={`/profile_provider/${user.id}/`}>
+                Szczegóły
+              </Link>
+              <p>
+                <strong>{user.name}</strong>{" "}
+                <span>
+                  (Dostępność: {user.dateFrom}-{user.dateTo})
+                </span>
+              </p>
             </div>
           ))}
         </div>
